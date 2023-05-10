@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public TMP_Text scoreText;
+    private int score;
+    // Start is called before the first frame update T
     void Start()
     {
-        
+        score = 0;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(collision.gameObject.CompareTag("Brick");
+        if (collision.gameObject.CompareTag("Brick"))
+        {
+            Destroy(collision.gameObject);
+            score++;
+            scoreText.text = score.ToString();
+        }
     }
 }

@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     {
         for (int x = 0; x < 10; x++)
 
-        {
+        {                                                                      
+                                                                            //rotation
             Instantiate(brickPrefab, new Vector2(x * xSpace + xOffset, 3), Quaternion.identity);
             Instantiate(brickPrefab, new Vector2(x * xSpace + xOffset, 3.75f), Quaternion.identity);
             Instantiate(brickPrefab, new Vector2(x * xSpace + xOffset, 4.5f), Quaternion.identity);

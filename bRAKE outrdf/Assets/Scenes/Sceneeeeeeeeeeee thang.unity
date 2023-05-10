@@ -224,12 +224,15 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -11.537302, y: -5.0429044}
-  - {x: -11.506834, y: 4.9947696}
-  - {x: 11.440705, y: 4.938082}
-  - {x: 11.467235, y: -5.1321864}
-  - {x: -11.391545, y: -4.9847984}
-  - {x: 11.418995, y: -5.049248}
+  - {x: -9.456268, y: -4.183348}
+  - {x: -9.578939, y: -0.018384695}
+  - {x: -9.561525, y: 4.135214}
+  - {x: 9.631114, y: 4.214246}
+  - {x: 9.689523, y: -0.015417695}
+  - {x: 9.748122, y: -4.2726297}
+  - {x: 9.657642, y: -4.136911}
+  - {x: -9.898633, y: -4.260962}
+  - {x: 9.428444, y: -4.144452}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -246,7 +249,7 @@ GameObject:
   - component: {fileID: 497406724}
   - component: {fileID: 497406723}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,6 +486,7 @@ GameObject:
   - component: {fileID: 775451009}
   - component: {fileID: 775451008}
   - component: {fileID: 775451007}
+  - component: {fileID: 775451012}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -502,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53411e0a712cb2948a9ac05c20c22ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartBallSpeed: 5
   player: {fileID: 1098858833}
 --- !u!50 &775451008
 Rigidbody2D:
@@ -607,6 +612,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &775451012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775451006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d605a2068753b0b46bcc85ff95b9676d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 497406723}
 --- !u!1 &1098858833
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public float StartBallSpeed = 2;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = Random.insideUnitCircle.normalized * 10;
+        GetComponent<Rigidbody2D>().velocity = Random.insideUnitCircle.normalized * StartBallSpeed;
     }
 
     // Update is called once per frame
