@@ -9,7 +9,7 @@ public class Player1 : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.UpArrow))
-        {
+        {                     //direction
             transform.Translate(Vector2.up * Time.deltaTime * speed);
         }
 
