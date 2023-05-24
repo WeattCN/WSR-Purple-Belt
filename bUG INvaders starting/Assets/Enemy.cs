@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour
 {
     private Animator animator;
     public float speed;
-    private Vector2 direction;
+    static private Vector2 direction;
+    public float Bounds = 11;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +20,16 @@ public class Enemy : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * speed);
 
-        if(transform.position.x > 8f)
+        if(transform.position.x > Bounds)
         {
             direction = Vector2.left;
+            MoveDown();
         }
 
-        if (transform.position.x < -8f)
+        if (transform.position.x < -Bounds)
         {
             direction = Vector2.right;
+            MoveDown();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -39,6 +42,9 @@ public class Enemy : MonoBehaviour
 
     private void MoveDown()            //2 blokc has dot
     {      //                  1 blokc 2 blokc 3 blokc 4 blokc 5 blokc 3 has dots = FindObjectType (1 blokc)
-        foreach (Enemy enemy in FindObjectOfType)
+        foreach (Enemy enemy in FindObjectsOfType(typeof(Enemy)))
+        {
+            enemy.transform.Translate(Vector2.down);
+        }
     }
 }
